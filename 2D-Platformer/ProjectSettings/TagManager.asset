@@ -7,6 +7,8 @@ TagManager:
   - Ground
   - Coin
   - Goal
+  - Enemy
+  - Box
   layers:
   - Default
   - TransparentFX

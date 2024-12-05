@@ -62,15 +62,21 @@ public class PlayerController : MonoBehaviour
             isGrounded = true;
         }
 
+        if(collision.gameObject.tag.Equals("Box"))
+        {
+            isGrounded = true;
+        }
+
         if(collision.gameObject.tag.Equals("Coin"))
         {
-            //score goes up'
+            //score goes up
             gm.score++;
             Destroy(collision.gameObject);
         }
 
-        if(collision.gameObject.tag.Equals("Goal"))
+        if (collision.gameObject.tag.Equals("Goal"))
         {
+            //Go to Goal Screen
             SceneManager.LoadScene("GoalScreen");
         }
     }
@@ -78,6 +84,11 @@ public class PlayerController : MonoBehaviour
     private void OnCollisionExit2D(Collision2D collision)
     {
         if(collision.gameObject.tag.Equals("Ground"))
+        {
+            isGrounded = false;
+        }
+
+        if(collision.gameObject.tag.Equals("Box"))
         {
             isGrounded = false;
         }
