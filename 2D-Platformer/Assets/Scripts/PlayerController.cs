@@ -27,7 +27,7 @@ public class PlayerController : MonoBehaviour
     {
         Vector3 newPosition = transform.position;
 
-        //variab;es to mirror the player
+        //variables to mirror the player
         Vector3 newScale = transform.localScale;
         float currentScale = Mathf.Abs(transform.localScale.x); //take absolute value of the current x scale, this is always positive
 
