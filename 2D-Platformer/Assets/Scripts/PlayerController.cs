@@ -79,6 +79,11 @@ public class PlayerController : MonoBehaviour
             //Go to Goal Screen
             SceneManager.LoadScene("GoalScreen");
         }
+
+        if (collision.gameObject.tag.Equals("Enemy"))
+        {
+            //Destroy("Player");
+        }
     }
 
     private void OnCollisionExit2D(Collision2D collision)
